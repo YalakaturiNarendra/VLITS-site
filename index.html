@@ -19,22 +19,24 @@
 <body>
   <section class="header">
     <nav>
-      <a href="index.html">
-        <img src="images/lara.png" alt="College Logo" />
-      </a>
-      <div class="nav-links" id="navLinks">
-        <i class="fas fa-times" id="closeMenu" onclick="hideMenu()"></i>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="course.html">Course</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="conatct.html">Contact</a></li>
-        </ul>
-      </div>
-      <i class="fas fa-bars" id="openMenu" onclick="showMenu()"></i>
-    </nav>
-
+        <a href="index.html">
+          <img src="images/lara.png" alt="College Logo" />
+        </a>
+      
+        <div class="nav-links" id="navLinks">
+          <i class="fas fa-times" id="closeMenu"></i>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="course.html">Course</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      
+        <i class="fas fa-bars" id="openMenu"></i>
+      </nav>
+            
     <div class="text-box">
       <h1>Vignan's Lara Institute of Technology & Science</h1>
       <p>
@@ -42,7 +44,7 @@
         Known for its commitment to academic excellence and innovation, the institute offers a vibrant learning environment,<br>
         modern infrastructure, and a strong focus on skill development to shape future-ready engineers and professionals.
       </p>
-      <a href="#" class="btn">Visit Us to Know More</a>
+      <a href="about.html" class="btn">Visit Us to Know More</a>
     </div>
   </section>
 
@@ -155,7 +157,7 @@
   
   <section class="cta">
     <h1>Enroll For Our Various Online Courses<br>Anywhere From The World</h1>
-    <a href="" class="btn">Contact Us</a>
+    <a href="contact.html" class="btn">Contact Us</a>
   </section>
 
   <footer class="footer">
@@ -175,6 +177,8 @@
       </div>
     </div>
     <p class="footer-credit">© 2025 Vignan's Lara Institute. All rights reserved.</p>
+    <p class="footer-credit">© 2025 Yalakaturi Narendra.</p>
+
   </footer>
   
   
@@ -192,18 +196,19 @@
     const navLinks = document.getElementById("navLinks");
     const openMenuIcon = document.getElementById("openMenu");
     const closeMenuIcon = document.getElementById("closeMenu");
-
-    function showMenu() {
+  
+    openMenuIcon.addEventListener("click", () => {
       navLinks.classList.add("show");
       openMenuIcon.style.display = "none";
       closeMenuIcon.style.display = "block";
-    }
-
-    function hideMenu() {
+    });
+  
+    closeMenuIcon.addEventListener("click", () => {
       navLinks.classList.remove("show");
       openMenuIcon.style.display = "block";
       closeMenuIcon.style.display = "none";
-    }
+    });
   </script>
-</body>
+  
+    </body>
 </html>
